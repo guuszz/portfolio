@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+type Layout = "desktop" | "mobile";
+
 type Props = {
   title: string;
   description: string;
@@ -8,6 +10,8 @@ type Props = {
   image: string;
   imageAlt: string;
   imageWidth?: number;
+  imageHeight?: number;
+  layout?: Layout;
   demoUrl?: string;
   repoUrl: string;
 };
@@ -19,21 +23,35 @@ export function ProjectCard({
   stack,
   image,
   imageAlt,
-  imageWidth = 1200,
+  imageWidth = 1440,
+  imageHeight = 900,
+  layout = "desktop",
   demoUrl,
   repoUrl,
 }: Props) {
   return (
     <article className="group rounded-xl border border-border bg-surface/40 p-5 transition-colors hover:border-muted/30 sm:p-6">
-      <div className="overflow-hidden rounded-lg border border-border bg-bg">
-        <Image
-          src={image}
-          alt={imageAlt}
-          width={imageWidth}
-          height={750}
-          className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
-        />
-      </div>
+      {layout === "mobile" ? (
+        <div className="flex justify-center overflow-hidden rounded-lg border border-border bg-bg py-6">
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            className="h-auto w-[220px] rounded-md shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        </div>
+      ) : (
+        <div className="overflow-hidden rounded-lg border border-border bg-bg">
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
+          />
+        </div>
+      )}
 
       <div className="mt-5">
         <h3 className="text-xl font-semibold tracking-tight">{title}</h3>

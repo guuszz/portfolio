@@ -30,10 +30,12 @@ const PROJECTS = [
     description:
       "App mobile para treinos em casa com peso do corpo.",
     descriptionEn: "Mobile app for at-home bodyweight workouts.",
-    stack: ["react-native", "expo", "typescript", "expo-router"],
+    stack: ["react-native", "expo", "expo-router", "typescript", "async-storage", "reanimated", "expo-haptics"],
     image: "/screenshots/academia.png",
     imageAlt: "Tela de onboarding do FitHome",
     imageWidth: 414,
+    imageHeight: 896,
+    layout: "mobile" as const,
     demoUrl: "https://fithome-alpha.vercel.app",
     repoUrl: "https://github.com/guuszz/Academia-Em-Casa",
   },
@@ -59,7 +61,7 @@ export default function Home() {
           Gustavo Oliveira.
         </h1>
         <p className="mt-4 text-2xl font-medium text-muted sm:text-3xl">
-          Construo coisas para a web.
+          Construo coisas para web e mobile.
         </p>
         <p className="mt-6 max-w-prose text-muted">
           Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
