@@ -56,28 +56,28 @@ export function ProjectCard({
       <div className="mt-5">
         <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
         <p className="mt-2 text-muted">{description}</p>
-        <p className="mt-1 text-sm text-muted/70">{descriptionEn}</p>
+        <p className="mt-1 text-sm text-muted/80" lang="en">{descriptionEn}</p>
 
         <ul className="mt-4 flex flex-wrap gap-2 font-mono text-xs text-muted">
           {stack.map((s) => (
-            <li key={s} className="rounded-md border border-border px-2 py-0.5">
+            <li key={s} className="rounded-md border border-border px-2 py-1">
               {s}
             </li>
           ))}
         </ul>
 
-        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+        <div className="mt-5 flex flex-wrap gap-x-4 text-sm">
           {demoUrl ? (
             <a
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-accent transition-opacity hover:opacity-80"
+              className="inline-flex min-h-[44px] items-center gap-1 py-2 text-accent transition-opacity hover:opacity-80"
             >
-              Demo ao vivo <span aria-hidden>↗</span>
+              Demo ao vivo <span aria-hidden="true">↗</span>
             </a>
           ) : (
-            <span className="inline-flex items-center gap-1 text-muted/60">
+            <span className="inline-flex min-h-[44px] items-center gap-1 py-2 text-muted/80">
               Demo em breve
             </span>
           )}
@@ -85,9 +85,9 @@ export function ProjectCard({
             href={repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-fg transition-opacity hover:opacity-80"
+            className="inline-flex min-h-[44px] items-center gap-1 py-2 text-fg transition-opacity hover:opacity-80"
           >
-            Código <span aria-hidden>↗</span>
+            Código <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
