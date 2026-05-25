@@ -1,3 +1,4 @@
+import { Spotlight } from "@/components/ui/spotlight";
 import { ProjectCard } from "@/components/ProjectCard";
 
 const PROJECTS = [
@@ -43,7 +44,9 @@ const PROJECTS = [
 
 export default function Home() {
   return (
-    <main id="main-content" className="mx-auto max-w-2xl px-6 py-20 sm:py-28">
+    <main id="main-content" className="relative mx-auto max-w-2xl overflow-hidden px-6 py-20 sm:py-28">
+      <Spotlight className="-top-40 left-0 md:-top-20 md:left-20" fill="#a3e635" />
+      <Spotlight className="left-full top-10 hidden md:block" fill="#a3e635" />
       {/* Header */}
       <header className="mb-20 flex items-center justify-between">
         <a
