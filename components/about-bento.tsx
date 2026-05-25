@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Coffee, MapPin } from "lucide-react";
+import { Coffee, MapPin, Code2, GitCommit, Calendar, Zap } from "lucide-react";
 import * as React from "react";
+import { NumberTicker } from "./number-ticker";
 
 const STACK_GROUPS = {
   Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],
@@ -125,6 +126,22 @@ export function AboutBento() {
         </div>
       </motion.div>
 
+      {/* Em números — NumberTicker */}
+      <motion.div
+        variants={item}
+        className="col-span-1 rounded-xl border border-border bg-surface/40 p-5 sm:col-span-2"
+      >
+        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted/80">
+          Em números
+        </p>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4">
+          <Stat icon={Code2} value={6} label="repos públicos" />
+          <Stat icon={GitCommit} value={54} label="commits" />
+          <Stat icon={Zap} value={4} label="apps no ar" />
+          <Stat icon={Calendar} value={3} label="anos codando" />
+        </div>
+      </motion.div>
+
       {/* Now — o que tô estudando */}
       <motion.div
         variants={item}
@@ -145,5 +162,33 @@ export function AboutBento() {
         </div>
       </motion.div>
     </motion.div>
+  );
+}
+
+function Stat({
+  icon: Icon,
+  value,
+  label,
+  suffix,
+}: {
+  icon: React.ElementType;
+  value: number;
+  label: string;
+  suffix?: string;
+}) {
+  return (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center gap-1.5 text-accent">
+        <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+        <NumberTicker
+          value={value}
+          suffix={suffix}
+          className="font-mono text-2xl font-semibold tabular-nums text-fg"
+        />
+      </div>
+      <p className="font-mono text-[10px] uppercase tracking-widest text-muted">
+        {label}
+      </p>
+    </div>
   );
 }
