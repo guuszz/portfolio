@@ -10,7 +10,7 @@ const PROJECTS = [
     image: "/screenshots/gfocus.png",
     imageAlt: "Landing page do Gfocus",
     imageWidth: 1440,
-    demoUrl: undefined,
+    demoUrl: "https://gfocus-zeta.vercel.app",
     repoUrl: "https://github.com/guuszz/Gfocus",
   },
   {
@@ -22,7 +22,7 @@ const PROJECTS = [
     image: "/screenshots/oficina.png",
     imageAlt: "Dashboard da Oficina com clientes, veículos e ordens",
     imageWidth: 1440,
-    demoUrl: undefined,
+    demoUrl: "https://oficina-rouge.vercel.app",
     repoUrl: "https://github.com/guuszz/OFICINA",
   },
   {
@@ -34,7 +34,7 @@ const PROJECTS = [
     image: "/screenshots/academia.png",
     imageAlt: "Tela de onboarding do FitHome",
     imageWidth: 414,
-    demoUrl: undefined,
+    demoUrl: "https://fithome-alpha.vercel.app",
     repoUrl: "https://github.com/guuszz/Academia-Em-Casa",
   },
 ];
