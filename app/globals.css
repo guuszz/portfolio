@@ -14,4 +14,26 @@
     background-color: theme("colors.accent");
     color: theme("colors.bg");
   }
+
+  /* Focus states explícitos — substitui ring azul default do browser */
+  :focus {
+    outline: none;
+  }
+  :focus-visible {
+    @apply rounded-sm outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+}
+
+/* Respeita preferência do sistema por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

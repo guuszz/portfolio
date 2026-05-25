@@ -60,7 +60,7 @@ export default function Home() {
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Gustavo Oliveira.
         </h1>
-        <p className="mt-4 text-2xl font-medium text-muted sm:text-3xl">
+        <p className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl">
           Construo coisas para web e mobile.
         </p>
         <p className="mt-6 max-w-prose text-muted">
@@ -69,7 +69,7 @@ export default function Home() {
           consigam ler sem sofrer. Atualmente estudando arquitetura de APIs e padrões
           aplicados a Node.js.
         </p>
-        <p className="mt-3 max-w-prose text-sm text-muted/70">
+        <p className="mt-3 hidden max-w-prose text-sm text-muted md:block">
           Information Systems student and full-stack developer in training. Focused on
           clean APIs, polished interfaces, and readable code.
         </p>
