@@ -152,18 +152,6 @@ export default function Home() {
               @guuszz
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 text-fg transition-colors hover:text-accent"
-            >
-              <span className="text-muted">linkedin</span>
-              <span className="text-muted">→</span>
-              (adicionar URL)
-            </a>
-          </li>
         </ul>
       </section>
 
