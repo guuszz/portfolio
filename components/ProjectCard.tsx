@@ -1,0 +1,78 @@
+import Image from "next/image";
+
+type Props = {
+  title: string;
+  description: string;
+  descriptionEn: string;
+  stack: string[];
+  image: string;
+  imageAlt: string;
+  imageWidth?: number;
+  demoUrl?: string;
+  repoUrl: string;
+};
+
+export function ProjectCard({
+  title,
+  description,
+  descriptionEn,
+  stack,
+  image,
+  imageAlt,
+  imageWidth = 1200,
+  demoUrl,
+  repoUrl,
+}: Props) {
+  return (
+    <article className="group rounded-xl border border-border bg-surface/40 p-5 transition-colors hover:border-muted/30 sm:p-6">
+      <div className="overflow-hidden rounded-lg border border-border bg-bg">
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={imageWidth}
+          height={750}
+          className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
+        />
+      </div>
+
+      <div className="mt-5">
+        <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+        <p className="mt-2 text-muted">{description}</p>
+        <p className="mt-1 text-sm text-muted/70">{descriptionEn}</p>
+
+        <ul className="mt-4 flex flex-wrap gap-2 font-mono text-xs text-muted">
+          {stack.map((s) => (
+            <li key={s} className="rounded-md border border-border px-2 py-0.5">
+              {s}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+          {demoUrl ? (
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-accent transition-opacity hover:opacity-80"
+            >
+              Demo ao vivo <span aria-hidden>↗</span>
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-1 text-muted/60">
+              Demo em breve
+            </span>
+          )}
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-fg transition-opacity hover:opacity-80"
+          >
+            Código <span aria-hidden>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
