@@ -9,13 +9,14 @@
   body {
     @apply bg-bg text-fg antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+    background-size: 32px 32px;
   }
   ::selection {
     background-color: theme("colors.accent");
     color: theme("colors.bg");
   }
-
-  /* Focus states explícitos — substitui ring azul default do browser */
   :focus {
     outline: none;
   }
@@ -24,7 +25,6 @@
   }
 }
 
-/* Respeita preferência do sistema por menos movimento */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
