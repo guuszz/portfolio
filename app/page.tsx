@@ -3,6 +3,7 @@ import { StaggerProjects } from "@/components/stagger-projects";
 import { AboutBento } from "@/components/about-bento";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandTrigger } from "@/components/command-trigger";
+import { TechMarquee } from "@/components/tech-marquee";
 
 const PROJECTS = [
   {
@@ -90,12 +91,17 @@ export default function Home() {
         </section>
 
         {/* About — Bento */}
-        <section id="about" className="mb-24">
+        <section id="about" className="mb-12">
           <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
             <span className="text-accent" aria-hidden="true">01.</span> Sobre
           </h2>
           <AboutBento />
         </section>
+
+        {/* Marquee — sai do container max-w pra ocupar toda largura */}
+        <div className="relative -mx-6 mb-24 border-y border-border bg-surface/30 sm:-mx-[max(calc((100vw-672px)/2),1.5rem)]">
+          <TechMarquee />
+        </div>
 
         {/* Projects */}
         <section id="projects" className="mb-24">
