@@ -41,6 +41,18 @@ const PROJECTS = [
     demoUrl: "https://fithome-alpha.vercel.app",
     repoUrl: "https://github.com/guuszz/Academia-Em-Casa",
   },
+  {
+    title: "PR Reviewer",
+    description: "Análise de Pull Requests do GitHub com IA — resumo, possíveis bugs e sugestões.",
+    descriptionEn: "AI-powered GitHub Pull Request review using Claude.",
+    stack: ["next.js", "typescript", "anthropic-sdk", "claude-sonnet-4.6", "tailwind", "github-api"],
+    image: "/screenshots/pr-reviewer.png",
+    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Claude Sonnet 4.6'",
+    imageWidth: 1280,
+    imageHeight: 900,
+    demoUrl: "https://pr-reviewer-lemon.vercel.app",
+    repoUrl: "https://github.com/guuszz/pr-reviewer",
+  },
 ];
 
 export default function Home() {
