@@ -44,10 +44,10 @@ const PROJECTS = [
   {
     title: "PR Reviewer",
     description: "Análise de Pull Requests do GitHub com IA — resumo, possíveis bugs e sugestões.",
-    descriptionEn: "AI-powered GitHub Pull Request review using Claude.",
-    stack: ["next.js", "typescript", "anthropic-sdk", "claude-sonnet-4.6", "tailwind", "github-api"],
+    descriptionEn: "AI-powered GitHub Pull Request review using Gemini.",
+    stack: ["next.js", "typescript", "google-gemini", "gemini-2.0-flash", "tailwind", "github-api"],
     image: "/screenshots/pr-reviewer.png",
-    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Claude Sonnet 4.6'",
+    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Gemini 2.0 Flash'",
     imageWidth: 1280,
     imageHeight: 900,
     demoUrl: "https://pr-reviewer-lemon.vercel.app",
