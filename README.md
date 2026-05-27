@@ -1,8 +1,17 @@
 # Portfolio · guuszz
 
-Site pessoal construído com Next.js 14 e Tailwind CSS. Tema minimal dark.
+<p>
+  <img src="https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=next.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tailwind-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/shadcn/ui-black?style=flat-square&logo=shadcnui&logoColor=white"/>
+  <a href="https://portfolio-gusz-s-projects7.vercel.app"><img src="https://img.shields.io/github/deployments/guuszz/portfolio/production?label=vercel&logo=vercel&style=flat-square" alt="Vercel deploy"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/guuszz/portfolio?style=flat-square" alt="MIT License"/></a>
+</p>
 
-**Deploy:** Vercel — em https://github.com/guuszz/portfolio importe na [vercel.com](https://vercel.com/new), é zero config.
+Site pessoal construído com Next.js 14, TypeScript, Tailwind CSS, shadcn/ui e Aceternity UI. Tema minimal dark.
+
+**Demo:** [portfolio-gusz-s-projects7.vercel.app](https://portfolio-gusz-s-projects7.vercel.app)
 
 ## Stack
 
