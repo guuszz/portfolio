@@ -25,7 +25,7 @@ const PROJECTS = [
     image: "/screenshots/oficina.png",
     imageAlt: "Dashboard da Oficina Mecânica com cards de clientes, veículos e ordens",
     imageWidth: 1440,
-    demoUrl: "https://oficina-rouge.vercel.app",
+    demoUrl: "https://oficina-swart.vercel.app",
     repoUrl: "https://github.com/guuszz/OFICINA",
   },
   {
