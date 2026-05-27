@@ -45,9 +45,9 @@ const PROJECTS = [
     title: "PR Reviewer",
     description: "Análise de Pull Requests do GitHub com IA — resumo, possíveis bugs e sugestões.",
     descriptionEn: "AI-powered GitHub Pull Request review using Gemini.",
-    stack: ["next.js", "typescript", "google-gemini", "gemini-1.5-flash", "tailwind", "github-api"],
+    stack: ["next.js", "typescript", "google-gemini", "gemini-2.5-flash", "tailwind", "github-api"],
     image: "/screenshots/pr-reviewer.png",
-    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Gemini 1.5 Flash'",
+    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Gemini 2.5 Flash'",
     imageWidth: 1280,
     imageHeight: 900,
     demoUrl: "https://pr-reviewer-lemon.vercel.app",
@@ -75,6 +75,7 @@ export default function Home() {
             <nav aria-label="Principal" className="hidden gap-5 text-sm text-muted sm:flex">
               <a href="#about" className="py-2 transition-colors hover:text-fg">about</a>
               <a href="#projects" className="py-2 transition-colors hover:text-fg">projects</a>
+              <a href="/uses" className="py-2 transition-colors hover:text-fg">uses</a>
               <a href="#contact" className="py-2 transition-colors hover:text-fg">contact</a>
             </nav>
             <CommandTrigger />
