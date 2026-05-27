@@ -75,7 +75,9 @@ export default function Home() {
             <nav aria-label="Principal" className="hidden gap-5 text-sm text-muted sm:flex">
               <a href="#about" className="py-2 transition-colors hover:text-fg">about</a>
               <a href="#projects" className="py-2 transition-colors hover:text-fg">projects</a>
+              <a href="/now" className="py-2 transition-colors hover:text-fg">now</a>
               <a href="/uses" className="py-2 transition-colors hover:text-fg">uses</a>
+              <a href="/snippets" className="py-2 transition-colors hover:text-fg">snippets</a>
               <a href="#contact" className="py-2 transition-colors hover:text-fg">contact</a>
             </nav>
             <CommandTrigger />
