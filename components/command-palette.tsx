@@ -83,7 +83,7 @@ export function CommandPalette() {
       label: "Oficina Mecânica",
       description: "Sistema full-stack",
       icon: ExternalLink,
-      perform: () => window.open("https://oficina-rouge.vercel.app", "_blank"),
+      perform: () => window.open("https://oficina-swart.vercel.app", "_blank"),
     },
     {
       id: "proj-fithome",
