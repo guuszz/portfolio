@@ -1,6 +1,7 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import { SpotlightParallax } from "@/components/ui/spotlight-parallax";
 import { Reveal } from "@/components/ui/reveal";
+import { TextReveal } from "@/components/ui/text-reveal";
 import { StaggerProjects } from "@/components/stagger-projects";
 import { AboutBento } from "@/components/about-bento";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -91,21 +92,31 @@ export default function Home() {
 
         {/* Hero */}
         <section className="mb-24">
-          <p className="mb-4 font-mono text-sm text-accent">olá, eu sou</p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Gustavo Oliveira.
-          </h1>
-          <p className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl">
-            Construo coisas para web e mobile.
-          </p>
-          <Reveal delay={0.1}>
+          <TextReveal
+            as="p"
+            text="olá, eu sou"
+            className="mb-4 font-mono text-sm text-accent"
+          />
+          <TextReveal
+            as="h1"
+            text="Gustavo Oliveira."
+            delay={0.15}
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
+          />
+          <TextReveal
+            as="p"
+            text="Construo coisas para web e mobile."
+            delay={0.3}
+            className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl"
+          />
+          <Reveal delay={0.55}>
             <p className="mt-6 max-w-prose text-muted">
               Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
               Foco em APIs bem desenhadas, interfaces limpas e código que outras pessoas
               consigam ler sem sofrer.
             </p>
           </Reveal>
-          <Reveal delay={0.2}>
+          <Reveal delay={0.65}>
             <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
               Information Systems student and full-stack developer in training. Focused on
               clean APIs, polished interfaces, and readable code.
