@@ -1,4 +1,5 @@
 import { Spotlight } from "@/components/ui/spotlight";
+import { SpotlightParallax } from "@/components/ui/spotlight-parallax";
 import { Reveal } from "@/components/ui/reveal";
 import { StaggerProjects } from "@/components/stagger-projects";
 import { AboutBento } from "@/components/about-bento";
@@ -59,8 +60,10 @@ const PROJECTS = [
 export default function Home() {
   return (
     <main id="main-content" className="relative mx-auto max-w-2xl overflow-hidden px-6 py-20 sm:py-28">
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-20" fill="rgb(163 230 53)" />
-      <Spotlight className="left-full top-10 hidden md:block" fill="rgb(163 230 53)" />
+      <SpotlightParallax>
+        <Spotlight className="-top-40 left-0 md:-top-20 md:left-20" fill="rgb(163 230 53)" />
+        <Spotlight className="left-full top-10 hidden md:block" fill="rgb(163 230 53)" />
+      </SpotlightParallax>
 
       <div className="relative z-10">
         {/* Header */}
