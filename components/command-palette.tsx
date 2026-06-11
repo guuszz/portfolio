@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Command } from "cmdk";
+import { Title as DialogTitle, Description as DialogDescription } from "@radix-ui/react-dialog";
 import { useTheme } from "next-themes";
 import { getLenis } from "@/components/providers/smooth-scroll-provider";
 import {
@@ -141,6 +142,13 @@ export function CommandPalette() {
         label="Paleta de comandos"
         className="fixed inset-0 z-[70]"
       >
+        {/* Título/descrição p/ leitores de tela — Radix Dialog exige
+            um Title registrado via contexto (o label sozinho não basta) */}
+        <DialogTitle className="sr-only">Paleta de comandos</DialogTitle>
+        <DialogDescription className="sr-only">
+          Busque e navegue entre seções, projetos, contato e tema do site.
+        </DialogDescription>
+
         {/* Overlay */}
         <div
           className="fixed inset-0 bg-bg/70 backdrop-blur-sm"
