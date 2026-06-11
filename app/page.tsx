@@ -1,4 +1,5 @@
 import { Spotlight } from "@/components/ui/spotlight";
+import { Reveal } from "@/components/ui/reveal";
 import { StaggerProjects } from "@/components/stagger-projects";
 import { AboutBento } from "@/components/about-bento";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -94,71 +95,83 @@ export default function Home() {
           <p className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl">
             Construo coisas para web e mobile.
           </p>
-          <p className="mt-6 max-w-prose text-muted">
-            Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
-            Foco em APIs bem desenhadas, interfaces limpas e código que outras pessoas
-            consigam ler sem sofrer.
-          </p>
-          <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
-            Information Systems student and full-stack developer in training. Focused on
-            clean APIs, polished interfaces, and readable code.
-          </p>
+          <Reveal delay={0.1}>
+            <p className="mt-6 max-w-prose text-muted">
+              Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
+              Foco em APIs bem desenhadas, interfaces limpas e código que outras pessoas
+              consigam ler sem sofrer.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
+              Information Systems student and full-stack developer in training. Focused on
+              clean APIs, polished interfaces, and readable code.
+            </p>
+          </Reveal>
         </section>
 
         {/* About — Bento */}
         <section id="about" className="mb-12">
-          <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
-            <span className="text-accent" aria-hidden="true">01.</span> Sobre
-          </h2>
+          <Reveal>
+            <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
+              <span className="text-accent" aria-hidden="true">01.</span> Sobre
+            </h2>
+          </Reveal>
           <AboutBento />
         </section>
 
         {/* Marquee — sai do container max-w pra ocupar toda largura */}
-        <div className="relative -mx-6 mb-24 border-y border-border bg-surface/30 sm:-mx-[max(calc((100vw-672px)/2),1.5rem)]">
-          <TechMarquee />
-        </div>
+        <Reveal blur={0} y={16}>
+          <div className="relative -mx-6 mb-24 border-y border-border bg-surface/30 sm:-mx-[max(calc((100vw-672px)/2),1.5rem)]">
+            <TechMarquee />
+          </div>
+        </Reveal>
 
         {/* Projects */}
         <section id="projects" className="mb-24">
-          <h2 className="mb-8 font-mono text-sm uppercase tracking-widest text-muted">
-            <span className="text-accent" aria-hidden="true">02.</span> Projetos
-          </h2>
+          <Reveal>
+            <h2 className="mb-8 font-mono text-sm uppercase tracking-widest text-muted">
+              <span className="text-accent" aria-hidden="true">02.</span> Projetos
+            </h2>
+          </Reveal>
           <StaggerProjects projects={PROJECTS} />
         </section>
 
         {/* Contact */}
         <section id="contact" className="mb-16">
-          <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
-            <span className="text-accent" aria-hidden="true">03.</span> Contato
-          </h2>
-          <p className="text-muted">
-            Aberto a oportunidades, colaborações ou só uma boa conversa sobre código.
-            A forma mais rápida de me achar:
-          </p>
-          <ul className="mt-6 space-y-3 font-mono text-sm">
-            <li>
-              <a
-                href="mailto:gustavosaraiva2504@gmail.com"
-                className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
-              >
-                <span className="text-muted">email</span>
-                <span className="text-muted" aria-hidden="true">→</span>
-                gustavosaraiva2504@gmail.com
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/guuszz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
-              >
-                <span className="text-muted">github</span>
-                <span className="text-muted" aria-hidden="true">→</span>
-                @guuszz
-              </a>
-            </li>
-          </ul>
+          <Reveal>
+            <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
+              <span className="text-accent" aria-hidden="true">03.</span> Contato
+            </h2>
+            <p className="text-muted">
+              Aberto a oportunidades, colaborações ou só uma boa conversa sobre código.
+              A forma mais rápida de me achar:
+            </p>
+            <ul className="mt-6 space-y-3 font-mono text-sm">
+              <li>
+                <a
+                  href="mailto:gustavosaraiva2504@gmail.com"
+                  className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
+                >
+                  <span className="text-muted">email</span>
+                  <span className="text-muted" aria-hidden="true">→</span>
+                  gustavosaraiva2504@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/guuszz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
+                >
+                  <span className="text-muted">github</span>
+                  <span className="text-muted" aria-hidden="true">→</span>
+                  @guuszz
+                </a>
+              </li>
+            </ul>
+          </Reveal>
         </section>
 
         <footer className="mt-20 border-t border-border pt-6 font-mono text-xs text-muted/80">
