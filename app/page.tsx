@@ -61,7 +61,9 @@ const PROJECTS = [
 
 export default function Home() {
   return (
-    <main id="main-content" className="relative mx-auto max-w-2xl overflow-hidden px-6 py-20 sm:py-28">
+    // overflow-clip (não hidden): hidden cria caixa rolável programaticamente —
+    // focus restore do ⌘K rolava o main por dentro e quebrava o scroll do Lenis
+    <main id="main-content" className="relative mx-auto max-w-2xl overflow-clip px-6 py-20 sm:py-28">
       {/* fixed: precisa ficar FORA do wrapper com transform (containing block) */}
       <GridIllumination />
       <SpotlightParallax>
