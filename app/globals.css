@@ -45,6 +45,22 @@
   }
 }
 
+/* Lenis — quando ativo, neutraliza o scroll-behavior nativo
+   (https://lenis.darkroom.engineering) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 /* View Transitions API — animação suave entre estados/rotas */
 @view-transition {
   navigation: auto;

@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Command } from "cmdk";
 import { useTheme } from "next-themes";
+import { getLenis } from "@/components/providers/smooth-scroll-provider";
 import {
   Briefcase,
   Code2,
@@ -52,7 +53,13 @@ export function CommandPalette() {
   }, []);
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const lenis = getLenis();
+    if (lenis) {
+      lenis.scrollTo(`#${id}`, { offset: -16 });
+    } else {
+      // reduced motion / Lenis off — fallback nativo
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const copyEmail = async () => {

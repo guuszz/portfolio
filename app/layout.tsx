@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { CommandPalette } from "@/components/command-palette";
 import { ReadingProgress } from "@/components/reading-progress";
 
@@ -105,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Pular para o conteúdo
           </a>
           <ReadingProgress />
-          {children}
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
           <CommandPalette />
         </ThemeProvider>
       </body>
