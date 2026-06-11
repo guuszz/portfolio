@@ -19,8 +19,12 @@ const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
 /**
  * Reveal de scroll: fade + slide-up + blur que se desfaz.
- * Sob prefers-reduced-motion renderiza um div estático —
- * nunca depende de transição pra ficar visível.
+ *
+ * Estrutura idêntica em SSR e cliente (sempre motion.div com o mesmo initial)
+ * pra não quebrar a hidratação — `useReducedMotion()` difere entre servidor
+ * (false) e cliente, então ele só ajusta a transição (JS, fora do HTML do SSR).
+ * O reduced motion é garantido pelo CSS (bloco prefers-reduced-motion via
+ * [data-reveal]), que força o estado final visível independente de scroll/JS.
  */
 export function Reveal({
   children,
@@ -33,17 +37,14 @@ export function Reveal({
 }: RevealProps) {
   const reduced = useReducedMotion();
 
-  if (reduced) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
       className={className}
+      data-reveal=""
       initial={{ opacity: 0, y, ...(blur > 0 && { filter: `blur(${blur}px)` }) }}
       whileInView={{ opacity: 1, y: 0, ...(blur > 0 && { filter: "blur(0px)" }) }}
       viewport={{ once, margin: margin as `${number}px` }}
-      transition={{ duration: 0.6, ease: EASE, delay }}
+      transition={reduced ? { duration: 0 } : { duration: 0.6, ease: EASE, delay }}
     >
       {children}
     </motion.div>

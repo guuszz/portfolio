@@ -16,9 +16,14 @@ const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
 /**
  * Entrada do texto palavra por palavra: sobe + desfoca pro lugar.
- * O elemento real (h1/p) fica no DOM do SSR com o texto completo —
- * SEO intacto; leitores de tela leem a frase inteira via aria-label.
- * Sob prefers-reduced-motion renderiza texto puro.
+ *
+ * Estrutura idêntica em SSR e cliente (sempre spans) — não ramifica o DOM
+ * por reduced motion, senão o `useReducedMotion()` (false no servidor, true
+ * no cliente) causaria hydration mismatch. O reduced motion é tratado:
+ *   1) no JS, zerando a duração da transição;
+ *   2) no CSS (bloco prefers-reduced-motion via [data-text-reveal]), que força
+ *      o estado final visível mesmo antes do JS hidratar.
+ * SEO/leitor de tela: h1/p real com o texto completo + aria-label.
  */
 export function TextReveal({
   text,
@@ -28,25 +33,24 @@ export function TextReveal({
   stagger = 0.045,
 }: TextRevealProps) {
   const reduced = useReducedMotion();
-
-  if (reduced) {
-    return <Tag className={className}>{text}</Tag>;
-  }
-
   const words = text.split(" ");
 
   return (
-    <Tag className={className} aria-label={text}>
+    <Tag className={className} aria-label={text} data-text-reveal="">
       {words.map((word, i) => (
         <motion.span
           key={`${word}-${i}`}
           aria-hidden="true"
-          className="inline-block will-change-transform"
+          className="inline-block"
           initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.5, ease: EASE, delay: delay + i * stagger }}
+          transition={
+            reduced
+              ? { duration: 0 }
+              : { duration: 0.5, ease: EASE, delay: delay + i * stagger }
+          }
         >
-          {/* nbsp dentro do span: espaço comum no fim de inline-block colapsa */}
+          {/* nbsp explícito: espaço comum no fim de inline-block colapsa */}
           {word}
           {i < words.length - 1 ? "\u00A0" : ""}
         </motion.span>

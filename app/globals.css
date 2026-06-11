@@ -82,6 +82,15 @@ html.lenis body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  /* Reveal/TextReveal nascem com opacity:0 inline (estado inicial do motion).
+     Aqui forçamos o estado final visível — conteúdo aparece de imediato,
+     sem transform/blur e sem depender do JS hidratar. */
+  [data-reveal],
+  [data-text-reveal] span {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation-duration: 0ms;
