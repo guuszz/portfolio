@@ -97,7 +97,7 @@ export function AboutBento() {
               Status
             </p>
             <p className="mt-1 text-fg">Disponível pra oportunidades</p>
-            <p className="text-sm text-muted">Estágio, freela ou colaboração open-source</p>
+            <p className="text-sm text-muted">Freela, colaboração open-source e estudos em cibersegurança</p>
           </div>
         </div>
       </motion.div>
@@ -138,7 +138,7 @@ export function AboutBento() {
           <Stat icon={Code2} value={6} label="repos públicos" />
           <Stat icon={GitCommit} value={54} label="commits" />
           <Stat icon={Zap} value={4} label="deploys Vercel" />
-          <Stat icon={Calendar} value={1} label="ano de pr?tica" />
+          <Stat icon={Calendar} value={1} label="ano de prática" />
         </div>
       </motion.div>
 
@@ -154,8 +154,9 @@ export function AboutBento() {
               No que estou trabalhando
             </p>
             <p className="mt-1 text-muted leading-relaxed">
-              Estudando <span className="text-fg">arquitetura de APIs</span> e{" "}
-              <span className="text-fg">padrões aplicados a Node.js</span>.
+              Estudando <span className="text-fg">arquitetura de APIs</span>,{" "}
+              <span className="text-fg">padrões aplicados a Node.js</span> e{" "}
+              <span className="text-fg">fundamentos de cibersegurança</span>.
               Procurando oportunidades pra colaborar e aprender com devs mais experientes.
             </p>
           </div>

@@ -12,7 +12,7 @@ import { TechMarquee } from "@/components/tech-marquee";
 const PROJECTS = [
   {
     title: "Gfocus",
-    description: "App de produtividade com tarefas, foco em UX, filtros e organiza??o de estado.",
+    description: "App de produtividade com tarefas, foco em UX, filtros e organização de estado.",
     descriptionEn: "Productivity-focused todo app with drag & drop and smart filters.",
     stack: ["typescript", "react", "vite", "tailwind", "zustand"],
     image: "/screenshots/gfocus.png",
@@ -34,7 +34,7 @@ const PROJECTS = [
   },
   {
     title: "FitHome",
-    description: "App mobile em React Native/Expo para treinos em casa, navega??o por telas e persist?ncia local.",
+    description: "App mobile em React Native/Expo para treinos em casa, navegação por telas e persistência local.",
     descriptionEn: "Mobile app for at-home bodyweight workouts.",
     stack: ["react-native", "expo", "expo-router", "typescript", "async-storage", "reanimated", "expo-haptics"],
     image: "/screenshots/academia.png",
@@ -110,7 +110,7 @@ export default function Home() {
           />
           <TextReveal
             as="p"
-            text="Estudante de SI buscando est?gio em tecnologia."
+            text="Estudante de SI focado em tecnologia e cibersegurança."
             delay={0.3}
             className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl"
           />
@@ -123,7 +123,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.65}>
             <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
-              Information Systems student looking for an internship in technology. Focused on frontend, JavaScript, React, APIs, GitHub and Vercel deployments.
+              Information Systems student focused on web development, cybersecurity fundamentals, APIs, GitHub and Vercel deployments.
             </p>
           </Reveal>
         </section>
@@ -184,7 +184,7 @@ export default function Home() {
                   className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
                 >
                   <span className="text-muted">linkedin</span>
-                  <span className="text-muted" aria-hidden="true">?</span>
+                  <span className="text-muted" aria-hidden="true">↗</span>
                   /in/gustavo-saraiva
                 </a>
               </li>
