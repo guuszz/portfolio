@@ -62,8 +62,8 @@ const personSchema = {
   alternateName: "guuszz",
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
-  sameAs: ["https://github.com/guuszz"],
-  jobTitle: "Full-stack Developer",
+  sameAs: ["https://github.com/guuszz", "https://www.linkedin.com/in/gustavo-saraiva-054807358/"],
+  jobTitle: "Frontend Developer Intern",
   description:
     "Estudante de Sistemas de Informação e desenvolvedor full-stack em formação.",
   address: {

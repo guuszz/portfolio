@@ -137,8 +137,8 @@ export function AboutBento() {
         <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4">
           <Stat icon={Code2} value={6} label="repos públicos" />
           <Stat icon={GitCommit} value={54} label="commits" />
-          <Stat icon={Zap} value={4} label="apps no ar" />
-          <Stat icon={Calendar} value={3} label="anos codando" />
+          <Stat icon={Zap} value={4} label="deploys Vercel" />
+          <Stat icon={Calendar} value={1} label="ano de pr?tica" />
         </div>
       </motion.div>
 

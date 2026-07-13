@@ -12,7 +12,7 @@ import { TechMarquee } from "@/components/tech-marquee";
 const PROJECTS = [
   {
     title: "Gfocus",
-    description: "Lista de tarefas otimizada para foco e produtividade pessoal.",
+    description: "App de produtividade com tarefas, foco em UX, filtros e organiza??o de estado.",
     descriptionEn: "Productivity-focused todo app with drag & drop and smart filters.",
     stack: ["typescript", "react", "vite", "tailwind", "zustand"],
     image: "/screenshots/gfocus.png",
@@ -34,7 +34,7 @@ const PROJECTS = [
   },
   {
     title: "FitHome",
-    description: "App mobile para treinos em casa com peso do corpo.",
+    description: "App mobile em React Native/Expo para treinos em casa, navega??o por telas e persist?ncia local.",
     descriptionEn: "Mobile app for at-home bodyweight workouts.",
     stack: ["react-native", "expo", "expo-router", "typescript", "async-storage", "reanimated", "expo-haptics"],
     image: "/screenshots/academia.png",
@@ -110,7 +110,7 @@ export default function Home() {
           />
           <TextReveal
             as="p"
-            text="Construo coisas para web e mobile."
+            text="Estudante de SI buscando est?gio em tecnologia."
             delay={0.3}
             className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl"
           />
@@ -123,8 +123,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.65}>
             <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
-              Information Systems student and full-stack developer in training. Focused on
-              clean APIs, polished interfaces, and readable code.
+              Information Systems student looking for an internship in technology. Focused on frontend, JavaScript, React, APIs, GitHub and Vercel deployments.
             </p>
           </Reveal>
         </section>
@@ -175,6 +174,18 @@ export default function Home() {
                   <span className="text-muted">email</span>
                   <span className="text-muted" aria-hidden="true">→</span>
                   gustavosaraiva2504@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gustavo-saraiva-054807358/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
+                >
+                  <span className="text-muted">linkedin</span>
+                  <span className="text-muted" aria-hidden="true">?</span>
+                  /in/gustavo-saraiva
                 </a>
               </li>
               <li>
