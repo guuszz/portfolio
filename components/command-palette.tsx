@@ -78,12 +78,12 @@ export function CommandPalette() {
 
     // Projetos
     {
-      id: "proj-gfocus",
+      id: "proj-mapper",
       group: "Projetos",
-      label: "Gfocus",
-      description: "App de produtividade",
+      label: "API Attack Surface Mapper",
+      description: "Inventário offline OpenAPI",
       icon: ExternalLink,
-      perform: () => window.open("https://gfocus-zeta.vercel.app", "_blank"),
+      perform: () => window.open("https://github.com/guuszz/api-attack-surface", "_blank"),
     },
     {
       id: "proj-oficina",
@@ -91,15 +91,15 @@ export function CommandPalette() {
       label: "Oficina Mecânica",
       description: "Sistema full-stack",
       icon: ExternalLink,
-      perform: () => window.open("https://oficina-swart.vercel.app", "_blank"),
+      perform: () => window.open("https://github.com/guuszz/OFICINA", "_blank"),
     },
     {
-      id: "proj-fithome",
+      id: "proj-scopeguard",
       group: "Projetos",
-      label: "FitHome",
-      description: "App mobile de treinos",
+      label: "ScopeGuard",
+      description: "Validação de escopo",
       icon: ExternalLink,
-      perform: () => window.open("https://fithome-alpha.vercel.app", "_blank"),
+      perform: () => window.open("https://github.com/guuszz/scopeguard", "_blank"),
     },
 
     // Contato

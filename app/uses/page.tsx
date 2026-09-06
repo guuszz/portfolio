@@ -201,7 +201,7 @@ const SECTIONS: Section[] = [
       },
       {
         name: "End-to-end testing",
-        desc: "Playwright. Próximo grande passo pra subir cobertura do OFICINA de 20% pra 60%+.",
+        desc: "Playwright está presente nos testes E2E da OFICINA. Métricas de cobertura devem indicar o conjunto de arquivos e testes medidos.",
         link: "https://playwright.dev/",
       },
       {

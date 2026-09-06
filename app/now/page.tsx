@@ -7,15 +7,15 @@ import { CommandTrigger } from "@/components/command-trigger";
 export const metadata: Metadata = {
   title: "Now · em que tô trabalhando",
   description:
-    "O que tô construindo, estudando e lendo agora. Atualizada mensalmente. Inspirada em nownownow.com.",
+    "O que tô construindo, estudando e lendo agora. Atualizada conforme a evolução dos projetos. Inspirada em nownownow.com.",
   openGraph: {
     title: "Now · Gustavo Oliveira",
-    description: "Atualização mensal sobre o que tô construindo, estudando e lendo.",
+    description: "Revisões de engenharia e estudos em desenvolvimento seguro.",
   },
 };
 
 // ─── Edite este arquivo no início de cada mês ──────────────────────
-const LAST_UPDATED = "27 de maio de 2026";
+const LAST_UPDATED = "6 de setembro de 2026";
 const FROM_LOCATION = "Vitória da Conquista, BA";
 
 interface Section {
@@ -30,103 +30,25 @@ interface Section {
 
 const SECTIONS: Section[] = [
   {
-    emoji: "🛠️",
-    title: "Construindo",
+    emoji: "🛠️", title: "Revisões em andamento — não foram incorporadas à main",
     items: [
-      {
-        label: "OFICINA",
-        description:
-          "SaaS multi-tenant pra gestão de oficinas mecânicas. Migrando pra produto de verdade — próximo passo é validar com 1 oficina real em Vitória da Conquista.",
-        link: "https://oficina-swart.vercel.app",
-      },
-      {
-        label: "pr-reviewer",
-        description:
-          "Code review automático com IA pra Pull Requests do GitHub. Acabei de adicionar URLs compartilháveis via Upstash Redis + streaming NDJSON.",
-        link: "https://pr-reviewer-lemon.vercel.app",
-      },
-      {
-        label: "telegram-commits-mirror",
-        description:
-          "Bot que reposta meus commits do GitHub num canal Telegram pessoal. Setup ainda precisa do webhook em cada repo.",
-        link: "https://github.com/guuszz/telegram-commits-mirror",
-      },
+      { label: "OFICINA", description: "Revogação de sessões e concorrência testadas em ambiente local. PR em rascunho: auditoria de dependências e implantação ainda exigem revisão.", link: "https://github.com/guuszz/OFICINA/pull/8" },
+      { label: "API Attack Surface Mapper", description: "Referências locais e parâmetros sobrescritos. A matriz de compatibilidade explicita o suporte parcial a OpenAPI.", link: "https://github.com/guuszz/api-attack-surface/pull/3" },
+      { label: "ScopeGuard", description: "Regressões para redes parcialmente fora do escopo e interseções com regras negadas.", link: "https://github.com/guuszz/scopeguard/pull/3" },
     ],
   },
   {
-    emoji: "📚",
-    title: "Estudando",
+    emoji: "📚", title: "Aprofundamento atual",
     items: [
-      {
-        label: "E2E testing com Playwright",
-        description:
-          "Próximo grande passo pra elevar a cobertura do OFICINA de 20% pra 60%+. Vitest tá redondo pros unit tests, agora preciso dos fluxos completos.",
-      },
-      {
-        label: "Multi-tenancy patterns",
-        description:
-          "Construir OFICINA me ensinou mais que qualquer curso. Próximo: row-level security no Postgres + scoping de queries automatizado.",
-      },
-      {
-        label: "Design systems",
-        description:
-          "Apliquei a skill ui-ux-pro-max no OFICINA e o resultado mudou completamente. Estudando como empacotar isso como tema do shadcn/ui.",
-      },
+      { label: "AppSec e APIs", description: "Autenticação, autorização por organização, HTTP, modelagem de ameaças e reteste de correções." },
+      { label: "Evidência antes de métricas", description: "Testes unitários, integração e navegador medem coisas diferentes. Percentuais de um subconjunto não são cobertura de toda a aplicação." },
     ],
   },
   {
-    emoji: "📖",
-    title: "Lendo",
+    emoji: "🎯", title: "Próximos passos",
     items: [
-      {
-        label: "Designing Data-Intensive Applications (Kleppmann)",
-        description:
-          "Capítulo atual: replicação. Livro denso, vou devagar — 1 capítulo por semana é meu limite real.",
-      },
-      {
-        label: "Patterns of Enterprise Application Architecture (Fowler)",
-        description:
-          "Refresh dos patterns clássicos. Útil pra estruturar OFICINA quando crescer.",
-      },
-    ],
-  },
-  {
-    emoji: "🎯",
-    title: "Próximas metas (~30 dias)",
-    items: [
-      {
-        label: "Publicar 1º post técnico",
-        description:
-          "História da migração Anthropic → Google Gemini, com todos os bugs de mundo real. Draft já existe.",
-      },
-      {
-        label: "1º PR open-source mergeado",
-        description:
-          "Rota A: submeter exemplo de streaming NDJSON no vercel/examples.",
-      },
-      {
-        label: "OFICINA com 1 usuário real",
-        description:
-          "Ir numa oficina em VC, demonstrar o sistema, instalar gratuitamente, coletar feedback semanal.",
-      },
-      {
-        label: "Domínio próprio + portfolio.com",
-        description: "Pra deixar de ser portfolio-amber-omega-3kyqfla4q7.vercel.app.",
-      },
-    ],
-  },
-  {
-    emoji: "🎵",
-    title: "Soundtrack",
-    items: [
-      {
-        label: "Pra focar",
-        description: "Lo-fi (Spotify) + brown noise. Sertanejo aleatório quando tá fluindo.",
-      },
-      {
-        label: "Última descoberta",
-        description: "Code Radio (musicforprogramming.net). Som ambiente que casa com noite codando.",
-      },
+      { label: "Primeira oportunidade", description: "Candidaturas a estágio em Segurança/AppSec e backend júnior, sem esperar o portfólio ficar perfeito." },
+      { label: "Defender as decisões", description: "Reproduzir os testes e explicar as mudanças assistidas pelo Codex. Uso de IA não substitui revisão e domínio do código." },
     ],
   },
 ];
@@ -157,8 +79,7 @@ export default function NowPage() {
             Em que estou agora
           </h1>
           <p className="mt-4 max-w-prose text-base leading-relaxed text-muted">
-            O que tô construindo, estudando e lendo neste momento. Atualizada mensalmente —
-            anti-perfeição. Se você curte ver no que devs estão metidos hoje, esta é a página.
+            Um registro de revisões e estudos. Os links apontam para propostas em revisão, não para funcionalidades já implantadas.
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted/80">
             <span>📍 {FROM_LOCATION}</span>

@@ -46,3 +46,22 @@ public/screenshots/  # capturas dos projetos
 - Editar os projetos em `app/page.tsx` (array `PROJECTS`)
 - Trocar cores em `tailwind.config.ts` (tokens: `bg`, `fg`, `muted`, `accent`)
 - Trocar fonte em `app/layout.tsx`
+
+
+## Posicionamento e verificação
+
+A apresentação comunica estudante de Sistemas de Informação buscando a primeira oportunidade em desenvolvimento seguro/AppSec. OFICINA, Mapper e ScopeGuard aparecem antes da seção longa de tecnologias; links de revisão não são anúncios de deploy. Contadores de atividade e cargo profissional não comprovados foram retirados, inclusive do JSON-LD. Captura da OFICINA é um arquivo existente, não evidência de implantação dos PRs.
+
+```
+npm ci
+npm run check:content
+npm run typecheck
+npm run build
+npm run audit:prod
+```
+
+`check:content` valida seis critérios editoriais nos arquivos; não substitui testes de comportamento. Não havia suíte de testes de aplicação neste repositório. A validação visual/local foi realizada separadamente. O script legado `lint` depende de configuração ESLint ainda não estabelecida; não é contado como gate aprovado.
+
+**Pendência de segurança:** auditoria de produção continua reprovando na cadeia Next.js 14/PostCSS. Não foi aplicada a migração major sugerida por `npm audit fix --force`; a atualização exige revisão e retestes. O novo workflow mantém esse gate visível, sem exceção silenciosa.
+
+Texto e ajustes assistidos pelo Codex. Nenhum emprego, cliente, resultado comercial ou merge é inferido a partir dos projetos. As páginas /uses e /snippets preservam outros conteúdos preexistentes, que não foram integralmente auditados nesta revisão de apresentação.
