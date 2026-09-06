@@ -8,8 +8,9 @@ type Props = {
   description: string;
   descriptionEn: string;
   stack: string[];
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
+  reviewUrl?: string;
   imageWidth?: number;
   imageHeight?: number;
   layout?: Layout;
@@ -23,7 +24,8 @@ export function ProjectCard({
   descriptionEn,
   stack,
   image,
-  imageAlt,
+  imageAlt = "",
+  reviewUrl,
   imageWidth = 1440,
   imageHeight = 900,
   layout = "desktop",
@@ -33,7 +35,7 @@ export function ProjectCard({
   return (
     <CardGlow>
       <article className="relative rounded-xl border border-border bg-surface/40 p-5 transition-colors hover:border-muted/30 sm:p-6">
-        {layout === "mobile" ? (
+        {image && (layout === "mobile" ? (
           <div className="flex justify-center overflow-hidden rounded-lg border border-border bg-bg py-6">
             <Image
               src={image}
@@ -53,7 +55,7 @@ export function ProjectCard({
               className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
             />
           </div>
-        )}
+        ))}
 
         <div className="mt-5">
           <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
@@ -80,9 +82,10 @@ export function ProjectCard({
               </a>
             ) : (
               <span className="inline-flex min-h-[44px] items-center gap-1 py-2 text-muted/80">
-                Demo em breve
+                Exemplos locais no README
               </span>
             )}
+            {reviewUrl && <a href={reviewUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center py-2 text-accent">Revisão pendente ↗</a>}
             <a
               href={repoUrl}
               target="_blank"

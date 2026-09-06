@@ -14,20 +14,20 @@ const SITE_URL = "https://portfolio-amber-omega-3kyqfla4q7.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gustavo Oliveira · Full-stack developer",
+    default: "Gustavo Oliveira · Desenvolvimento seguro e AppSec",
     template: "%s · Gustavo Oliveira",
   },
   description:
-    "Estudante de Sistemas de Informação · Construindo APIs e apps com TypeScript & Node.js.",
+    "Estudante de Sistemas de Informação em busca da primeira oportunidade em desenvolvimento seguro, AppSec e segurança Web/API.",
   keywords: [
     "Gustavo Oliveira",
     "guuszz",
-    "full-stack developer",
+    "AppSec",
+    "desenvolvimento seguro",
     "TypeScript",
     "Node.js",
     "React",
     "Next.js",
-    "Expo",
     "desenvolvedor",
     "Vitória da Conquista",
     "Bahia",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Gustavo Oliveira", url: "https://github.com/guuszz" }],
   creator: "Gustavo Oliveira",
   openGraph: {
-    title: "Gustavo Oliveira · Full-stack developer",
-    description: "Portfolio · TypeScript, Node.js, React, Expo",
+    title: "Gustavo Oliveira · Desenvolvimento seguro e AppSec",
+    description: "Portfólio de estudante · Python, TypeScript, APIs e testes",
     type: "website",
     locale: "pt_BR",
     siteName: "gusz",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gustavo Oliveira · Full-stack developer",
-    description: "Portfolio · TypeScript, Node.js, React, Expo",
+    title: "Gustavo Oliveira · Desenvolvimento seguro e AppSec",
+    description: "Portfólio de estudante · Python, TypeScript, APIs e testes",
   },
   robots: { index: true, follow: true },
 };
@@ -63,9 +63,9 @@ const personSchema = {
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
   sameAs: ["https://github.com/guuszz", "https://www.linkedin.com/in/gustavo-saraiva-054807358/"],
-  jobTitle: "Frontend Developer Intern",
+  jobTitle: "Estudante de Sistemas de Informação",
   description:
-    "Estudante de Sistemas de Informação e desenvolvedor full-stack em formação.",
+    "Estudante de Sistemas de Informação com foco em desenvolvimento seguro e segurança Web/API.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vitória da Conquista",
@@ -78,10 +78,8 @@ const personSchema = {
     "Node.js",
     "React",
     "Next.js",
-    "React Native",
-    "Expo",
     "Tailwind CSS",
-    "MySQL",
+    "PostgreSQL",
     "Python",
   ],
   email: "mailto:gustavosaraiva2504@gmail.com",

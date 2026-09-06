@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "check:content": "node scripts/check-content.cjs",
+    "audit:prod": "npm audit --omit=dev --audit-level=high"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

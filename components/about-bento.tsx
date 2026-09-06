@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Coffee, MapPin, Code2, GitCommit, Calendar, Zap } from "lucide-react";
+import { Coffee, MapPin } from "lucide-react";
 import * as React from "react";
-import { NumberTicker } from "./number-ticker";
 
 const STACK_GROUPS = {
-  Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],
-  Back: ["Node.js", "Express", "Python"],
-  Mobile: ["React Native", "Expo"],
-  Data: ["MySQL", "Git"],
+  Aplicações: ["TypeScript", "React", "Node.js"],
+  Automação: ["Python", "pytest"],
+  Dados: ["PostgreSQL", "Prisma", "Docker"],
+  Qualidade: ["Git", "GitHub Actions", "Playwright"],
 };
 
 function LocalTime() {
@@ -54,11 +53,10 @@ export function AboutBento() {
         className="col-span-1 rounded-xl border border-border bg-surface/40 p-5 sm:col-span-2"
       >
         <p className="text-muted leading-relaxed">
-          Comecei a programar pela curiosidade de entender o que tinha por trás
-          das telas. Hoje construo aplicações web e mobile usando principalmente{" "}
-          <span className="text-fg">TypeScript</span>,{" "}
-          <span className="text-fg">Node.js</span> e{" "}
-          <span className="text-fg">React</span>.
+          Estudante de Sistemas de Informação com foco em desenvolvimento seguro,
+          AppSec e segurança de aplicações Web/API. Minha base prática está nos
+          projetos publicados em Python e TypeScript; estou buscando experiência
+          profissional e orientação de uma equipe.
         </p>
       </motion.div>
 
@@ -97,7 +95,7 @@ export function AboutBento() {
               Status
             </p>
             <p className="mt-1 text-fg">Disponível pra oportunidades</p>
-            <p className="text-sm text-muted">Freela, colaboração open-source e estudos em cibersegurança</p>
+            <p className="text-sm text-muted">Primeira oportunidade: estágio ou backend júnior</p>
           </div>
         </div>
       </motion.div>
@@ -108,7 +106,7 @@ export function AboutBento() {
         className="col-span-1 rounded-xl border border-border bg-surface/40 p-5 sm:col-span-2"
       >
         <p className="mb-3 font-mono text-xs uppercase tracking-widest text-muted/80">
-          stack atual
+          Tecnologias presentes nos projetos
         </p>
         <div className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 md:grid-cols-4">
           {Object.entries(STACK_GROUPS).map(([group, items]) => (
@@ -123,22 +121,6 @@ export function AboutBento() {
               </ul>
             </div>
           ))}
-        </div>
-      </motion.div>
-
-      {/* Em números — NumberTicker */}
-      <motion.div
-        variants={item}
-        className="col-span-1 rounded-xl border border-border bg-surface/40 p-5 sm:col-span-2"
-      >
-        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted/80">
-          Em números
-        </p>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4">
-          <Stat icon={Code2} value={6} label="repos públicos" />
-          <Stat icon={GitCommit} value={54} label="commits" />
-          <Stat icon={Zap} value={4} label="deploys Vercel" />
-          <Stat icon={Calendar} value={1} label="ano de prática" />
         </div>
       </motion.div>
 
@@ -163,33 +145,5 @@ export function AboutBento() {
         </div>
       </motion.div>
     </motion.div>
-  );
-}
-
-function Stat({
-  icon: Icon,
-  value,
-  label,
-  suffix,
-}: {
-  icon: React.ElementType;
-  value: number;
-  label: string;
-  suffix?: string;
-}) {
-  return (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center gap-1.5 text-accent">
-        <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-        <NumberTicker
-          value={value}
-          suffix={suffix}
-          className="font-mono text-2xl font-semibold tabular-nums text-fg"
-        />
-      </div>
-      <p className="font-mono text-[10px] uppercase tracking-widest text-muted">
-        {label}
-      </p>
-    </div>
   );
 }

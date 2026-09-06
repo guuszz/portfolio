@@ -11,51 +11,30 @@ import { TechMarquee } from "@/components/tech-marquee";
 
 const PROJECTS = [
   {
-    title: "Gfocus",
-    description: "App de produtividade com tarefas, foco em UX, filtros e organização de estado.",
-    descriptionEn: "Productivity-focused todo app with drag & drop and smart filters.",
-    stack: ["typescript", "react", "vite", "tailwind", "zustand"],
-    image: "/screenshots/gfocus.png",
-    imageAlt: "Landing page do Gfocus com hero, CTA e seção de features",
-    imageWidth: 1440,
-    demoUrl: "https://gfocus-zeta.vercel.app",
-    repoUrl: "https://github.com/guuszz/Gfocus",
-  },
-  {
-    title: "Oficina Mecânica",
-    description: "Sistema full-stack de gestão para oficina — API REST + interface web.",
-    descriptionEn: "Full-stack mechanic-shop management system.",
-    stack: ["node", "express", "react", "typescript", "vite", "tailwind"],
+    title: "OFICINA",
+    description: "Aplicação full-stack com organizações, papéis e autenticação por cookie. Examine os testes de integração e navegador; o PR de revogação de sessões segue em revisão.",
+    descriptionEn: "Full-stack application with organization isolation and reproducible API/browser tests.",
+    stack: ["TypeScript", "React", "PostgreSQL", "Prisma", "Playwright"],
     image: "/screenshots/oficina.png",
-    imageAlt: "Dashboard da Oficina Mecânica com cards de clientes, veículos e ordens",
-    imageWidth: 1440,
-    demoUrl: "https://oficina-swart.vercel.app",
+    imageAlt: "Captura existente da interface OFICINA; não representa necessariamente os PRs em revisão",
     repoUrl: "https://github.com/guuszz/OFICINA",
+    reviewUrl: "https://github.com/guuszz/OFICINA/pull/8",
   },
   {
-    title: "FitHome",
-    description: "App mobile em React Native/Expo para treinos em casa, navegação por telas e persistência local.",
-    descriptionEn: "Mobile app for at-home bodyweight workouts.",
-    stack: ["react-native", "expo", "expo-router", "typescript", "async-storage", "reanimated", "expo-haptics"],
-    image: "/screenshots/academia.png",
-    imageAlt: "Tela de onboarding do FitHome com lista de benefícios",
-    imageWidth: 414,
-    imageHeight: 896,
-    layout: "mobile" as const,
-    demoUrl: "https://fithome-alpha.vercel.app",
-    repoUrl: "https://github.com/guuszz/Academia-Em-Casa",
+    title: "API Attack Surface Mapper",
+    description: "Inventário offline de um subconjunto de contratos OpenAPI. Gera sinais para revisão, com limitações documentadas — não confirma vulnerabilidades na implementação.",
+    descriptionEn: "Offline OpenAPI subset inventory with deterministic review signals, not confirmed vulnerabilities.",
+    stack: ["Python", "OpenAPI", "pytest"],
+    repoUrl: "https://github.com/guuszz/api-attack-surface",
+    reviewUrl: "https://github.com/guuszz/api-attack-surface/pull/3",
   },
   {
-    title: "PR Reviewer",
-    description: "Análise de Pull Requests do GitHub com IA — resumo, possíveis bugs e sugestões.",
-    descriptionEn: "AI-powered GitHub Pull Request review using Gemini.",
-    stack: ["next.js", "typescript", "google-gemini", "gemini-2.5-flash", "tailwind", "github-api"],
-    image: "/screenshots/pr-reviewer.png",
-    imageAlt: "PR Reviewer com input pra URL e badge 'powered by Gemini 2.5 Flash'",
-    imageWidth: 1280,
-    imageHeight: 900,
-    demoUrl: "https://pr-reviewer-lemon.vercel.app",
-    repoUrl: "https://github.com/guuszz/pr-reviewer",
+    title: "ScopeGuard",
+    description: "Validação de escopo e normalização de alvos. A revisão de CIDRs mostra o bug reproduzido, a decisão de inclusão completa e os testes de fronteira.",
+    descriptionEn: "Scope validation with a reviewable CIDR containment fix and boundary regression tests.",
+    stack: ["Python", "IPv4/IPv6", "pytest"],
+    repoUrl: "https://github.com/guuszz/scopeguard",
+    reviewUrl: "https://github.com/guuszz/scopeguard/pull/3",
   },
 ];
 
@@ -110,29 +89,45 @@ export default function Home() {
           />
           <TextReveal
             as="p"
-            text="Estudante de SI focado em tecnologia e cibersegurança."
+            text="Desenvolvimento seguro, AppSec e segurança Web/API."
             delay={0.3}
             className="mt-4 text-xl font-medium text-muted text-pretty sm:text-3xl"
           />
           <Reveal delay={0.55}>
             <p className="mt-6 max-w-prose text-muted">
-              Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
-              Foco em APIs bem desenhadas, interfaces limpas e código que outras pessoas
-              consigam ler sem sofrer.
+              Sou estudante de Sistemas de Informação em busca da primeira oportunidade:
+              estágio em Segurança da Informação/AppSec ou backend júnior.
+              Uso projetos pessoais para estudar autenticação, autorização e testes de segurança.
             </p>
           </Reveal>
           <Reveal delay={0.65}>
             <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
-              Information Systems student focused on web development, cybersecurity fundamentals, APIs, GitHub and Vercel deployments.
+              Information Systems student seeking a first opportunity in secure backend development and application security.
             </p>
           </Reveal>
+        </section>
+
+        <nav aria-label="Atalhos para recrutadores" className="mb-10 flex flex-wrap gap-5 text-sm text-accent">
+          <a href="#projects">Ver projetos e evidências</a>
+          <a href="https://www.linkedin.com/in/gustavo-saraiva-054807358/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:gustavosaraiva2504@gmail.com">Contato</a>
+        </nav>
+
+        {/* Projects */}
+        <section id="projects" className="mb-24">
+          <Reveal>
+            <h2 className="mb-8 font-mono text-sm uppercase tracking-widest text-muted">
+              <span className="text-accent" aria-hidden="true">01.</span> Projetos
+            </h2>
+          </Reveal>
+          <StaggerProjects projects={PROJECTS} />
         </section>
 
         {/* About — Bento */}
         <section id="about" className="mb-12">
           <Reveal>
             <h2 className="mb-6 font-mono text-sm uppercase tracking-widest text-muted">
-              <span className="text-accent" aria-hidden="true">01.</span> Sobre
+              <span className="text-accent" aria-hidden="true">02.</span> Sobre
             </h2>
           </Reveal>
           <AboutBento />
@@ -144,16 +139,6 @@ export default function Home() {
             <TechMarquee />
           </div>
         </Reveal>
-
-        {/* Projects */}
-        <section id="projects" className="mb-24">
-          <Reveal>
-            <h2 className="mb-8 font-mono text-sm uppercase tracking-widest text-muted">
-              <span className="text-accent" aria-hidden="true">02.</span> Projetos
-            </h2>
-          </Reveal>
-          <StaggerProjects projects={PROJECTS} />
-        </section>
 
         {/* Contact */}
         <section id="contact" className="mb-16">

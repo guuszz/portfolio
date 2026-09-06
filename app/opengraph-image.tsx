@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Gustavo Oliveira · Full-stack developer";
+export const alt = "Gustavo Oliveira · Desenvolvimento seguro e AppSec";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -34,7 +34,7 @@ export default async function Image() {
             Gustavo Oliveira.
           </div>
           <div style={{ color: "#a3a3a3", fontSize: 40, marginTop: 8, fontWeight: 500 }}>
-            Construo coisas para web e mobile.
+            Estudante · Desenvolvimento seguro e AppSec.
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export default async function Image() {
             <span style={{ color: "#1f1f1f" }}>·</span>
             <span>react</span>
             <span style={{ color: "#1f1f1f" }}>·</span>
-            <span>expo</span>
+            <span>python</span>
           </div>
           <div style={{ color: "#a3a3a3", fontSize: 20, fontFamily: "monospace" }}>
             Vitória da Conquista · BA

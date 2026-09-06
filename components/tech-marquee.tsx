@@ -9,24 +9,7 @@ import { motion } from "motion/react";
  * Pausa no hover pra usuário conseguir ler.
  */
 
-const TECHS = [
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "React",
-  "Next.js",
-  "React Native",
-  "Expo",
-  "Vite",
-  "Tailwind CSS",
-  "Express",
-  "MySQL",
-  "Python",
-  "Git",
-  "Radix UI",
-  "Framer Motion",
-  "Zustand",
-];
+const TECHS = ["TypeScript", "Python", "Node.js", "React", "PostgreSQL", "Docker", "Git", "pytest", "Playwright"];
 
 export function TechMarquee() {
   return (
@@ -38,7 +21,7 @@ export function TechMarquee() {
         WebkitMaskImage:
           "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
       }}
-      aria-label="Tecnologias que utilizo"
+      aria-label="Tecnologias presentes nos projetos"
     >
       <motion.ul
         className="flex w-max gap-12 py-4 font-mono text-sm text-muted"
