@@ -116,14 +116,14 @@ export default function Home() {
           />
           <Reveal delay={0.55}>
             <p className="mt-6 max-w-prose text-muted">
-              Sou estudante de Sistemas de Informação e desenvolvedor full-stack em formação.
+              Sou estudante do 4º semestre de Sistemas de Informação, com conclusão prevista para 2029. Tenho interesse em segurança de aplicações, segurança de APIs e automação, e desenvolvo projetos que conectam software e segurança.
               Foco em APIs bem desenhadas, interfaces limpas e código que outras pessoas
               consigam ler sem sofrer.
             </p>
           </Reveal>
           <Reveal delay={0.65}>
             <p className="mt-3 hidden max-w-prose text-sm text-muted md:block" lang="en">
-              Information Systems student focused on web development, cybersecurity fundamentals, APIs, GitHub and Vercel deployments.
+              Information Systems student in Brazil, focused on application security, API security, automation, and secure software.
             </p>
           </Reveal>
         </section>
@@ -178,7 +178,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/gustavo-saraiva-054807358/"
+                  href="https://www.linkedin.com/in/gustavo-avelino-saraiva-oliveira-054807358/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex min-h-[44px] items-center gap-3 py-2 text-fg transition-colors hover:text-accent"
