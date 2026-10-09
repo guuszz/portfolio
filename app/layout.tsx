@@ -14,15 +14,15 @@ const SITE_URL = "https://portfolio-amber-omega-3kyqfla4q7.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gustavo Oliveira · Full-stack developer",
+    default: "Gustavo Oliveira · Segurança da Informação e AppSec",
     template: "%s · Gustavo Oliveira",
   },
   description:
-    "Estudante de Sistemas de Informação · Construindo APIs e apps com TypeScript & Node.js.",
+    "Estudante do 4º semestre de Sistemas de Informação (conclusão prevista em 2029), com foco em segurança Web/API e automação.",
   keywords: [
     "Gustavo Oliveira",
     "guuszz",
-    "full-stack developer",
+    "segurança da informação",`n    "AppSec",`n    "segurança de APIs",
     "TypeScript",
     "Node.js",
     "React",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Gustavo Oliveira", url: "https://github.com/guuszz" }],
   creator: "Gustavo Oliveira",
   openGraph: {
-    title: "Gustavo Oliveira · Full-stack developer",
-    description: "Portfolio · TypeScript, Node.js, React, Expo",
+    title: "Gustavo Oliveira · Segurança da Informação e AppSec",
+    description: "Portfólio · Segurança Web/API, Python, Linux e automação",
     type: "website",
     locale: "pt_BR",
     siteName: "gusz",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gustavo Oliveira · Full-stack developer",
-    description: "Portfolio · TypeScript, Node.js, React, Expo",
+    title: "Gustavo Oliveira · Segurança da Informação e AppSec",
+    description: "Portfólio · Segurança Web/API, Python, Linux e automação",
   },
   robots: { index: true, follow: true },
 };
@@ -62,10 +62,10 @@ const personSchema = {
   alternateName: "guuszz",
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
-  sameAs: ["https://github.com/guuszz", "https://www.linkedin.com/in/gustavo-saraiva-054807358/"],
-  jobTitle: "Frontend Developer Intern",
+  sameAs: ["https://github.com/guuszz", "https://www.linkedin.com/in/gustavo-avelino-saraiva-oliveira-054807358/"],
+  jobTitle: "Estudante de Sistemas de Informação",
   description:
-    "Estudante de Sistemas de Informação e desenvolvedor full-stack em formação.",
+    "Estudante do 4º semestre de Sistemas de Informação, interessado em Segurança da Informação, AppSec e segurança de APIs.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vitória da Conquista",
@@ -82,7 +82,7 @@ const personSchema = {
     "Expo",
     "Tailwind CSS",
     "MySQL",
-    "Python",
+    "Python",`n    "Linux",`n    "Segurança de aplicações web",`n    "Segurança de APIs",
   ],
   email: "mailto:gustavosaraiva2504@gmail.com",
 };
