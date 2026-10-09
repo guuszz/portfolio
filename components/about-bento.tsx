@@ -6,7 +6,7 @@ import * as React from "react";
 import { NumberTicker } from "./number-ticker";
 
 const STACK_GROUPS = {
-  Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],
+  Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],`n  Sec: ["Segurança Web/API", "HTTP", "Linux", "revisão de acessos"],
   Back: ["Node.js", "Express", "Python"],
   Mobile: ["React Native", "Expo"],
   Data: ["MySQL", "Git"],
@@ -97,7 +97,7 @@ export function AboutBento() {
               Status
             </p>
             <p className="mt-1 text-fg">Disponível pra oportunidades</p>
-            <p className="text-sm text-muted">Freela, colaboração open-source e estudos em cibersegurança</p>
+            <p className="text-sm text-muted">Estágio em Segurança da Informação, AppSec ou áreas próximas</p>
           </div>
         </div>
       </motion.div>
@@ -135,10 +135,10 @@ export function AboutBento() {
           Em números
         </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4">
-          <Stat icon={Code2} value={6} label="repos públicos" />
-          <Stat icon={GitCommit} value={54} label="commits" />
-          <Stat icon={Zap} value={4} label="deploys Vercel" />
-          <Stat icon={Calendar} value={1} label="ano de prática" />
+          <Stat icon={Code2} value={2} label="projetos de segurança" />
+          <Stat icon={GitCommit} value={11} label="testes automatizados" />
+          <Stat icon={Zap} value={1} label="reporte aceito" />
+          <Stat icon={Calendar} value={4} label="projetos de software" />
         </div>
       </motion.div>
 
