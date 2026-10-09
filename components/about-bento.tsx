@@ -6,7 +6,8 @@ import * as React from "react";
 import { NumberTicker } from "./number-ticker";
 
 const STACK_GROUPS = {
-  Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],`n  Sec: ["Segurança Web/API", "HTTP", "Linux", "revisão de acessos"],
+  Front: ["TypeScript", "React", "Next.js", "Tailwind", "Vite"],
+  Sec: ["Segurança Web/API", "HTTP", "Linux", "revisão de acessos"],
   Back: ["Node.js", "Express", "Python"],
   Mobile: ["React Native", "Expo"],
   Data: ["MySQL", "Git"],
