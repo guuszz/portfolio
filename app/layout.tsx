@@ -22,7 +22,9 @@ export const metadata: Metadata = {
   keywords: [
     "Gustavo Oliveira",
     "guuszz",
-    "segurança da informação",`n    "AppSec",`n    "segurança de APIs",
+    "segurança da informação",
+    "AppSec",
+    "segurança de APIs",
     "TypeScript",
     "Node.js",
     "React",
@@ -82,7 +84,10 @@ const personSchema = {
     "Expo",
     "Tailwind CSS",
     "MySQL",
-    "Python",`n    "Linux",`n    "Segurança de aplicações web",`n    "Segurança de APIs",
+    "Python",
+    "Linux",
+    "Segurança de aplicações web",
+    "Segurança de APIs",
   ],
   email: "mailto:gustavosaraiva2504@gmail.com",
 };
