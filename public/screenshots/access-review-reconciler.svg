@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">Access Review Reconciler — resumo local de testes</title>
+<desc id="desc">Ilustração de um resumo real da suíte local: cinco testes aprovados, inventários fictícios e divergências sinalizadas para revisão humana sem alterações de acesso.</desc>
+<rect width="1200" height="750" rx="28" fill="#0b100d"/><rect x="36" y="36" width="1128" height="678" rx="22" fill="#111914" stroke="#2d3a30" stroke-width="2"/>
+<circle cx="78" cy="82" r="9" fill="#fb7185"/><circle cx="108" cy="82" r="9" fill="#fbbf24"/><circle cx="138" cy="82" r="9" fill="#a3e635"/><text x="178" y="90" fill="#aab7aa" font-family="Consolas,monospace" font-size="22">synthetic inventory / human review</text>
+<text x="82" y="175" fill="#a3e635" font-family="Arial,sans-serif" font-size="42" font-weight="700">Access Review Reconciler</text>
+<text x="82" y="218" fill="#c5d0c6" font-family="Arial,sans-serif" font-size="24">Divergências sinalizadas para revisão, nunca revogação automática</text>
+<rect x="82" y="270" width="1036" height="326" rx="16" fill="#080c09" stroke="#29332b"/>
+<text x="116" y="326" fill="#b7c5b8" font-family="Consolas,monospace" font-size="18">PS&gt; $env:PYTHONPATH='src'; python -m unittest discover -s tests -v</text>
+<text x="116" y="382" fill="#d6e1d7" font-family="Consolas,monospace" font-size="21">checks: duplicates · exceptions · inactive · unmatched · required fields</text>
+<text x="116" y="432" fill="#a3e635" font-family="Consolas,monospace" font-size="22">Ran 5 tests in 0.024s</text>
+<text x="116" y="476" fill="#a3e635" font-family="Consolas,monospace" font-size="22">OK</text>
+<rect x="82" y="625" width="246" height="48" rx="12" fill="#1d2b1f"/><text x="106" y="657" fill="#b8ef76" font-family="Arial,sans-serif" font-size="20" font-weight="700">5 / 5 testes aprovados</text>
+<text x="360" y="657" fill="#c5d0c6" font-family="Arial,sans-serif" font-size="20">CSV sintético · revisão humana</text>
+</svg>
